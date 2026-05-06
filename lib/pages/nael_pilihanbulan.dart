@@ -12,6 +12,7 @@ class _NaelPilihanbulanState extends State<NaelPilihanbulan> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // app bar dibuat oleh nael
       appBar: AppBar(
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,6 +48,10 @@ class _NaelPilihanbulanState extends State<NaelPilihanbulan> {
         ],
       ),
       body: Column(
+        children: [
+          SizedBox(height: 10,),
+          Text("Pilihan Bulan Penjejakan:", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 20),)
+        ],
 
       ),
     );
