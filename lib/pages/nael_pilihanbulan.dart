@@ -11,7 +11,9 @@ class _NaelPilihanbulanState extends State<NaelPilihanbulan> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: ,
+      appBar: AppBar(
+        title: Text("Guru Matematika", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+      )
     );
   }
 }
