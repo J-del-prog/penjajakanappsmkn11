@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:penjajakanappsmkn11/pages/nael_pilihanbulan.dart';
 
 void main(){
   runApp(PenjajakanApps());
@@ -14,6 +16,6 @@ class PenjajakanApps extends StatefulWidget {
 class _PenjajakanAppsState extends State<PenjajakanApps> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(home: NaelPilihanbulan(),);
   }
 }

@@ -12,7 +12,7 @@ class _NaelPilihanbulanState extends State<NaelPilihanbulan> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Guru Matematika", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+        title: Text("Guru Matematika", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white,), ),
       )
     );
   }
