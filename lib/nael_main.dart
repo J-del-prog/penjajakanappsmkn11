@@ -16,6 +16,6 @@ class PenjajakanApps extends StatefulWidget {
 class _PenjajakanAppsState extends State<PenjajakanApps> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: NaelPilihanbulan(),);
+    return MaterialApp(debugShowCheckedModeBanner: false,home: NaelPilihanbulan(),);
   }
 }
