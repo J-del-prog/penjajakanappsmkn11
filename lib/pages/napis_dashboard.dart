@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:penjajakanappsmkn11/model/napis_model.dart';
 import 'package:penjajakanappsmkn11/model/napiz_model_dash.dart';
 import 'package:penjajakanappsmkn11/pages/nael_pilihanbulan.dart';
-import 'package:penjajakanappsmkn11/pages/nafis_profile.dart';
 import 'package:penjajakanappsmkn11/pages/napis_notif.dart';
 
 class NapisDashboard extends StatefulWidget {
@@ -19,13 +17,13 @@ class _NapisDashboardState extends State<NapisDashboard> {
       page: NaelPilihanbulan(),
       label: "Home",
       icon: Icons.home,
-      color: Colors.black,
+      color: Colors.white,
     ),
     1: NapizModelDash(
       page: NapisNotif(),
       label: "Notification",
       icon: Icons.notifications,
-      color: Colors.black,
+      color: Colors.white,
     ),
   };
   @override
@@ -36,6 +34,7 @@ class _NapisDashboardState extends State<NapisDashboard> {
         showSelectedLabels: true,
         showUnselectedLabels: true,
         backgroundColor: Colors.blueAccent,
+        selectedLabelStyle: TextStyle(color: Colors.white),
         unselectedItemColor: Colors.white,
         unselectedLabelStyle: TextStyle(color: Colors.white),
         currentIndex: selectIndex,
