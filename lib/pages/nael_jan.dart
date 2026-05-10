@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:penjajakanappsmkn11/pages/nafis_profile.dart';
 
-class NaelPilihanbulan extends StatefulWidget {
-  const NaelPilihanbulan({super.key});
+import 'nafis_profile.dart';
+
+class NaelJan extends StatefulWidget {
+  const NaelJan({super.key});
 
   @override
-  State<NaelPilihanbulan> createState() => _NaelPilihanbulanState();
+  State<NaelJan> createState() => _NaelJanState();
 }
 
-class _NaelPilihanbulanState extends State<NaelPilihanbulan> {
+class _NaelJanState extends State<NaelJan> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,17 +47,6 @@ class _NaelPilihanbulanState extends State<NaelPilihanbulan> {
             icon: Image.asset("assets/image/img_1.png"),
           ),
         ],
-      ),
-      body: Column(
-        children: [
-          SizedBox(height: 10,),
-          Text("Pilihan Bulan Penjejakan:", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 24),),
-          SizedBox(height: 10,),
-          SizedBox(
-
-          )
-        ],
-
       ),
     );
   }
