@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:penjajakanappsmkn11/pages/nafis_profile.dart';
-import 'package:penjajakanappsmkn11/services/nael_pilhbulan_service.dart';
+import 'package:penjajakanappsmkn11/services/nael_feb_service.dart';
 
-class NaelPilihanbulan extends StatefulWidget {
-  const NaelPilihanbulan({super.key});
+import 'nafis_profile.dart';
+
+class Naelfebs extends StatefulWidget {
+  const Naelfebs({super.key});
 
   @override
-  State<NaelPilihanbulan> createState() => _NaelPilihanbulanState();
+  State<Naelfebs> createState() => _NaelJanState();
 }
 
-class _NaelPilihanbulanState extends State<NaelPilihanbulan> {
+class _NaelJanState extends State<Naelfebs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,20 +50,27 @@ class _NaelPilihanbulanState extends State<NaelPilihanbulan> {
         ],
       ),
       body: ListView.builder(
-        itemCount: pilihish.length,
+        itemCount: pil.length,
         itemBuilder: (context, index) {
           return Card(
-            elevation: 10,
+            elevation: 5,
             margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
-            child: Row(
-              children: [
-                SizedBox(width: 20,),
-                Title(color: Colors.black, child: Text(pilihish[index].bulan)),
-                SizedBox(width: 700,),
-                ElevatedButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => pilihish[index].screen)), child: Text("Cek"))
-              ],
-
-            )
+            child: ListTile(
+              title: Text(pil[index].nama),
+              subtitle: Text(
+                pil[index].kelengkapan,
+                style: TextStyle(fontSize: 10),
+              ),
+              trailing: Icon(
+                pil[index].mark ? Icons.check : Icons.cancel,
+                color: pil[index].mark ? Colors.green : Colors.red,
+              ),
+              onTap: () {
+                setState(() {
+                  pil[index].mark = !pil[index].mark;
+                });
+              },
+            ),
           );
         },
       ),

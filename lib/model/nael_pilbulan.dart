@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 
-class NaelPilbulan {
-   final String title;
-   final Widget screen;
+class NaelPilbulanilbulan {
+  final String bulan;
+  final int id;
+  final Widget screen;
 
-  NaelPilbulan({required this.title, required this.screen});
+  NaelPilbulanilbulan({required this.bulan, required this.id, required this.screen});
 }
