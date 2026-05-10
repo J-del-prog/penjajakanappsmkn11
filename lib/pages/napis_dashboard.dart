@@ -18,7 +18,7 @@ class _NapisDashboardState extends State<NapisDashboard> {
       label: "Home",
       icon: Icons.home,
       color: Colors.white,
-    ),
+       ),
     1: NapizModelDash(
       page: NapisNotif(),
       label: "Notification",
