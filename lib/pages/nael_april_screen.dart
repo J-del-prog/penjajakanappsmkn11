@@ -62,9 +62,16 @@ class _NaelAprilScreenState extends State<NaelAprilScreen> {
                 murid4[index].kelengkapan4,
                 style: TextStyle(fontSize: 10),
               ),
-              trailing: Icon(
-                murid4[index].mark4 ? Icons.check : Icons.cancel,
-                color: murid4[index].mark4 ? Colors.green : Colors.red,
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text("Lengkap:", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 14),),
+                  SizedBox(width: 5,),
+                  Icon(
+                    murid4[index].mark4 ? Icons.check : Icons.cancel,
+                    color: murid4[index].mark4 ? Colors.green : Colors.red,
+                  ),
+                ],
               ),
               onTap: () {
                 setState(() {

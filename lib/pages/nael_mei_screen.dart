@@ -62,9 +62,16 @@ class _NaelMeiScreenState extends State<NaelMeiScreen> {
                 murid5[index].kelengkapan5,
                 style: TextStyle(fontSize: 10),
               ),
-              trailing: Icon(
-                murid5[index].mark5 ? Icons.check : Icons.cancel,
-                color: murid5[index].mark5 ? Colors.green : Colors.red,
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text("Lengkap:", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 14),),
+                  SizedBox(width: 5,),
+                  Icon(
+                    murid5[index].mark5 ? Icons.check : Icons.cancel,
+                    color: murid5[index].mark5 ? Colors.green : Colors.red,
+                  ),
+                ],
               ),
               onTap: () {
                 setState(() {
