@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:penjajakanappsmkn11/pages/napis_detail_not.dart';
 import 'package:penjajakanappsmkn11/services/napis_notif_service.dart';
@@ -11,7 +10,6 @@ class NapisNotif extends StatefulWidget {
 }
 
 class _NapisNotifState extends State<NapisNotif> {
-  bool isDipilih = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,30 +42,25 @@ class _NapisNotifState extends State<NapisNotif> {
         itemCount: notif.length,
         itemBuilder: (context, index) {
           return Card(
+            color: Colors.blueAccent,
             elevation: 5,
             margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
-            child: SwitchListTile(
-              title: Text(notif[index].sender),
-              subtitle: Text(
-                notif[index].judul,
-                style: TextStyle(fontSize: 10),
-              ),
-              selected: notif[index].isRead,
-              value: notif[index].isRead,
-              onChanged: (value) {
-                setState(() {
-                  notif[index].isRead = true;
-                });
-                notif.sort(
-                  (a, b) => a.isRead.toString().compareTo(b.isRead.toString()),
-                );
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => NapisDetailNot(),
+            child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Title(color: Colors.black, child: Text(notif[index].sender )),
+                  ElevatedButton(
+                    style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.indigo)),
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => NapisDetailNot()),
+                    ),
+                    child: Text("Cek", style: TextStyle(color: Colors.white)),
                   ),
-                );
-              },
+                ],
+              ),
             ),
           );
         },
