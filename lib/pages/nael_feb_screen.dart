@@ -62,9 +62,16 @@ class _NaelJanState extends State<Naelfebs> {
                 murid2[index].kelengkapan2,
                 style: TextStyle(fontSize: 10),
               ),
-              trailing: Icon(
-                murid2[index].mark2 ? Icons.check : Icons.cancel,
-                color: murid2[index].mark2 ? Colors.green : Colors.red,
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text("Lengkap:", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 14),),
+                  SizedBox(width: 5,),
+                  Icon(
+                    murid2[index].mark2 ? Icons.check : Icons.cancel,
+                    color: murid2[index].mark2 ? Colors.green : Colors.red,
+                  ),
+                ],
               ),
               onTap: () {
                 setState(() {
