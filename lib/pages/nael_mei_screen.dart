@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:penjajakanappsmkn11/services/nael_feb_service.dart';
 
+import '../services/nael_mei_service.dart';
 import 'nafis_profile.dart';
 
-class Naelfebs extends StatefulWidget {
-  const Naelfebs({super.key});
+class NaelMeiScreen extends StatefulWidget {
+  const NaelMeiScreen({super.key});
 
   @override
-  State<Naelfebs> createState() => _NaelJanState();
+  State<NaelMeiScreen> createState() => _NaelMeiScreenState();
 }
 
-class _NaelJanState extends State<Naelfebs> {
+class _NaelMeiScreenState extends State<NaelMeiScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,24 +50,24 @@ class _NaelJanState extends State<Naelfebs> {
         ],
       ),
       body: ListView.builder(
-        itemCount: murid2.length,
+        itemCount: murid5.length,
         itemBuilder: (context, index) {
           return Card(
             elevation: 5,
             margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
             child: ListTile(
-              title: Text(murid2[index].nama2),
+              title: Text(murid5[index].nama5),
               subtitle: Text(
-                murid2[index].kelengkapan2,
+                murid5[index].kelengkapan5,
                 style: TextStyle(fontSize: 10),
               ),
               trailing: Icon(
-                murid2[index].mark2 ? Icons.check : Icons.cancel,
-                color: murid2[index].mark2 ? Colors.green : Colors.red,
+                murid5[index].mark5 ? Icons.check : Icons.cancel,
+                color: murid5[index].mark5 ? Colors.green : Colors.red,
               ),
               onTap: () {
                 setState(() {
-                  murid2[index].mark2 = !murid2[index].mark2;
+                  murid5[index].mark5 = !murid5[index].mark5;
                 });
               },
             ),

@@ -2,7 +2,10 @@
 
 import '../model/Nael_jan.dart';
 
-List <Naeljan> pilih = [
-Naeljan(nama: "wffw", kelengkapan: "100/100", id: 0),
-  Naeljan(nama: "wffw", kelengkapan: "100/100", id: 1),
+List <Naeljan> murid1 = [
+  Naeljan(nama1: "IRHAM Burger", kelengkapan1: "5/10", id1: 0),
+  Naeljan(nama1: "IRHAM Burger", kelengkapan1: "5/10", id1: 1),
+  Naeljan(nama1: "IRHAM Burger", kelengkapan1: "5/10", id1: 2),
+  Naeljan(nama1: "IRHAM Burger", kelengkapan1: "5/10", id1: 3),
+  Naeljan(nama1: "IRHAM Burger", kelengkapan1: "5/10", id1: 4),
 ];

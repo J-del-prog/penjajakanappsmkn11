@@ -1,10 +1,12 @@
 import 'package:penjajakanappsmkn11/model/nael_feb.dart';
 
-List <Naelfeb> pil = [
-Naelfeb(nama: "Andiw", kelengkapan: "7/10", id: 0),
-  Naelfeb(nama: "Andiw", kelengkapan: "7/10", id: 1),
-  Naelfeb(nama: "Andiw", kelengkapan: "7/10", id: 2),
-  Naelfeb(nama: "Andiw", kelengkapan: "7/10", id: 3),
-  Naelfeb(nama: "Andiw", kelengkapan: "7/10", id: 4),
-  Naelfeb(nama: "Andiw", kelengkapan: "7/10", id: 5),
+List <Naelfeb> murid2 = [
+Naelfeb(nama2: "IRHAM BURGER", kelengkapan2: "10/10", id2: 0),
+  Naelfeb(nama2: "IRHAM BURGER", kelengkapan2: "6/10", id2: 1),
+  Naelfeb(nama2: "IRHAM BURGER", kelengkapan2: "8/10", id2: 2),
+  Naelfeb(nama2: "IRHAM BURGER", kelengkapan2: "5/10", id2: 3),
+  Naelfeb(nama2: "IRHAM BURGER", kelengkapan2: "1/10", id2: 4),
+  Naelfeb(nama2: "IRHAM BURGER", kelengkapan2: "6/10", id2: 5),
+
+
 ];

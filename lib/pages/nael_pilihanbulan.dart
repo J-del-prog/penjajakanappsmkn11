@@ -54,14 +54,15 @@ class _NaelPilihanbulanState extends State<NaelPilihanbulan> {
           return Card(
             elevation: 10,
             margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
-            child: Row(
-              children: [
-                SizedBox(width: 20,),
-                Title(color: Colors.black, child: Text(pilihish[index].bulan)),
-                SizedBox(width: 700,),
-                ElevatedButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => pilihish[index].screen)), child: Text("Cek"))
-              ],
+            child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Title(color: Colors.black, child: Text(pilihish[index].bulan)),
+                  ElevatedButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => pilihish[index].screen)), child: Text("Cek"))
+                ],
 
+              ),
             )
           );
         },

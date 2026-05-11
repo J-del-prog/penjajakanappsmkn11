@@ -51,24 +51,24 @@ class _NaelJanState extends State<NaelJanScreen> {
         ],
       ),
       body: ListView.builder(
-        itemCount: pilih.length,
+        itemCount: murid1.length,
         itemBuilder: (context, index) {
           return Card(
             elevation: 5,
             margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
             child: ListTile(
-              title: Text(pilih[index].nama),
+              title: Text(murid1[index].nama1),
               subtitle: Text(
-                pilih[index].kelengkapan,
+                murid1[index].kelengkapan1,
                 style: TextStyle(fontSize: 10),
               ),
               trailing: Icon(
-                pil[index].mark ? Icons.check : Icons.cancel,
-                color: pil[index].mark ? Colors.green : Colors.red,
+                murid1[index].mark1 ? Icons.check : Icons.cancel,
+                color: murid1[index].mark1 ? Colors.green : Colors.red,
               ),
               onTap: () {
                 setState(() {
-                  pil[index].mark = !pil[index].mark;
+                  murid1[index].mark1 = !murid1[index].mark1;
                 });
               },
             ),
