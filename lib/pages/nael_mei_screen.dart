@@ -53,10 +53,11 @@ class _NaelMeiScreenState extends State<NaelMeiScreen> {
         itemCount: murid5.length,
         itemBuilder: (context, index) {
           return Card(
+            color: Colors.lightBlueAccent,
             elevation: 5,
             margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
             child: ListTile(
-              title: Text(murid5[index].nama5),
+              title: Text(murid5[index].nama5, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white)),
               subtitle: Text(
                 murid5[index].kelengkapan5,
                 style: TextStyle(fontSize: 10),

@@ -53,10 +53,11 @@ class _NaelAprilScreenState extends State<NaelAprilScreen> {
         itemCount: murid4.length,
         itemBuilder: (context, index) {
           return Card(
+            color: Colors.lightBlueAccent,
             elevation: 5,
             margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
             child: ListTile(
-              title: Text(murid4[index].nama4),
+              title: Text(murid4[index].nama4, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white)),
               subtitle: Text(
                 murid4[index].kelengkapan4,
                 style: TextStyle(fontSize: 10),

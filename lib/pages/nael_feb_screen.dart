@@ -53,10 +53,11 @@ class _NaelJanState extends State<Naelfebs> {
         itemCount: murid2.length,
         itemBuilder: (context, index) {
           return Card(
+            color: Colors.lightBlueAccent,
             elevation: 5,
             margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
             child: ListTile(
-              title: Text(murid2[index].nama2),
+              title: Text(murid2[index].nama2, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),),
               subtitle: Text(
                 murid2[index].kelengkapan2,
                 style: TextStyle(fontSize: 10),

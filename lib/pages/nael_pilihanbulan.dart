@@ -51,19 +51,33 @@ class _NaelPilihanbulanState extends State<NaelPilihanbulan> {
       body: ListView.builder(
         itemCount: pilihish.length,
         itemBuilder: (context, index) {
+          SizedBox(height: 50);
           return Card(
+            color: Colors.lightBlueAccent,
             elevation: 10,
             margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
             child: Padding(
               padding: const EdgeInsets.all(20),
-              child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Title(color: Colors.black, child: Text(pilihish[index].bulan)),
-                  ElevatedButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => pilihish[index].screen)), child: Text("Cek"))
+                  Title(
+                    color: Colors.black,
+                    child: Text(pilihish[index].bulan, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),),
+                  ),
+                  ElevatedButton(
+                    style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.indigo)),
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => pilihish[index].screen,
+                      ),
+                    ),
+                    child: Text("Cek", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                  ),
                 ],
-
               ),
-            )
+            ),
           );
         },
       ),
