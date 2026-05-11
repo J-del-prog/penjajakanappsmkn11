@@ -1,6 +1,6 @@
 class NapisNotifModel {
-  final String judul;
   final int id;
+  final String judul;
   final String pesan;
   final String sender;
 

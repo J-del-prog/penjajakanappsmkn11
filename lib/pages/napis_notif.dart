@@ -68,7 +68,7 @@ class _NapisNotifState extends State<NapisNotif> {
                     onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => NapisDetailNot(id: 0),
+                        builder: (context) => NapisDetailNot(id: notif[index].id),
                       ),
                     ),
                     child: Text("Cek", style: TextStyle(color: Colors.white)),
