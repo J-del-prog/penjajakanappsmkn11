@@ -42,7 +42,7 @@ class _NapisNotifState extends State<NapisNotif> {
         itemCount: notif.length,
         itemBuilder: (context, index) {
           return Card(
-            color: Colors.blueAccent,
+            color: Colors.lightBlueAccent,
             elevation: 5,
             margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
             child: Padding(
@@ -50,12 +50,26 @@ class _NapisNotifState extends State<NapisNotif> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Title(color: Colors.black, child: Text(notif[index].sender )),
+                  Title(
+                    color: Colors.white,
+                    child: Text(
+                      notif[index].sender,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
                   ElevatedButton(
-                    style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.indigo)),
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStatePropertyAll(Colors.indigo),
+                    ),
                     onPressed: () => Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => NapisDetailNot()),
+                      MaterialPageRoute(
+                        builder: (context) => NapisDetailNot(id: 0),
+                      ),
                     ),
                     child: Text("Cek", style: TextStyle(color: Colors.white)),
                   ),
