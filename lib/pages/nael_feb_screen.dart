@@ -57,20 +57,15 @@ class _NaelJanState extends State<Naelfebs> {
             elevation: 5,
             margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
             child: ListTile(
+              leading: Image.asset(murid2[index].image2, width: 40, height: 40,),
               title: Text(murid2[index].nama2, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),),
-              subtitle: Text(
-                murid2[index].kelengkapan2,
-                style: TextStyle(fontSize: 10),
-              ),
+              subtitle: Text(murid2[index].kelengkapan2, style: TextStyle(fontSize: 10),),
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text("Lengkap:", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 14),),
-                  SizedBox(width: 5,),
-                  Icon(
-                    murid2[index].mark2 ? Icons.check : Icons.cancel,
-                    color: murid2[index].mark2 ? Colors.green : Colors.red,
-                  ),
+                  Icon(murid2[index].mark2 ? Icons.check : Icons.cancel,
+                      color: murid2[index].mark2 ? Colors.green : Colors.red),
                 ],
               ),
               onTap: () {
@@ -79,9 +74,9 @@ class _NaelJanState extends State<Naelfebs> {
                 });
               },
             ),
+
           );
-        },
-      ),
+        },),
     );
   }
 }

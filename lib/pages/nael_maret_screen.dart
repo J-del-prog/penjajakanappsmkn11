@@ -57,20 +57,15 @@ class _NaelMaretScreenState extends State<NaelMaretScreen> {
             elevation: 5,
             margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
             child: ListTile(
+              leading: Image.asset(murid3[index].image3, width: 40, height: 40,),
               title: Text(murid3[index].nama3, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),),
-              subtitle: Text(
-                murid3[index].kelengkapan3,
-                style: TextStyle(fontSize: 10),
-              ),
+              subtitle: Text(murid3[index].kelengkapan3, style: TextStyle(fontSize: 10),),
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text("Lengkap:", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 14),),
-                  SizedBox(width: 5,),
-                  Icon(
-                    murid3[index].mark3 ? Icons.check : Icons.cancel,
-                    color: murid3[index].mark3 ? Colors.green : Colors.red,
-                  ),
+                  Icon(murid3[index].mark3 ? Icons.check : Icons.cancel,
+                      color: murid3[index].mark3 ? Colors.green : Colors.red),
                 ],
               ),
               onTap: () {
@@ -79,9 +74,9 @@ class _NaelMaretScreenState extends State<NaelMaretScreen> {
                 });
               },
             ),
+
           );
-        },
-      ),
-    );;
+        },),
+    );
   }
 }
