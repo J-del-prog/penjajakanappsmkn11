@@ -57,20 +57,15 @@ class _NaelAprilScreenState extends State<NaelAprilScreen> {
             elevation: 5,
             margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
             child: ListTile(
-              title: Text(murid4[index].nama4, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white)),
-              subtitle: Text(
-                murid4[index].kelengkapan4,
-                style: TextStyle(fontSize: 10),
-              ),
+              leading: Image.asset(murid4[index].image4, width: 40, height: 40,),
+              title: Text(murid4[index].nama4, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),),
+              subtitle: Text(murid4[index].kelengkapan4, style: TextStyle(fontSize: 10),),
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text("Lengkap:", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 14),),
-                  SizedBox(width: 5,),
-                  Icon(
-                    murid4[index].mark4 ? Icons.check : Icons.cancel,
-                    color: murid4[index].mark4 ? Colors.green : Colors.red,
-                  ),
+                  Icon(murid4[index].mark4 ? Icons.check : Icons.cancel,
+                      color: murid4[index].mark4 ? Colors.green : Colors.red),
                 ],
               ),
               onTap: () {
@@ -79,9 +74,9 @@ class _NaelAprilScreenState extends State<NaelAprilScreen> {
                 });
               },
             ),
+
           );
-        },
-      ),
-    );;
+        },),
+    );
   }
 }

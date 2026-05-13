@@ -57,20 +57,15 @@ class _NaelMeiScreenState extends State<NaelMeiScreen> {
             elevation: 5,
             margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
             child: ListTile(
-              title: Text(murid5[index].nama5, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white)),
-              subtitle: Text(
-                murid5[index].kelengkapan5,
-                style: TextStyle(fontSize: 10),
-              ),
+              leading: Image.asset(murid5[index].image5, width: 40, height: 40,),
+              title: Text(murid5[index].nama5, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),),
+              subtitle: Text(murid5[index].kelengkapan5, style: TextStyle(fontSize: 10),),
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text("Lengkap:", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 14),),
-                  SizedBox(width: 5,),
-                  Icon(
-                    murid5[index].mark5 ? Icons.check : Icons.cancel,
-                    color: murid5[index].mark5 ? Colors.green : Colors.red,
-                  ),
+                  Icon(murid5[index].mark5 ? Icons.check : Icons.cancel,
+                      color: murid5[index].mark5 ? Colors.green : Colors.red),
                 ],
               ),
               onTap: () {
@@ -79,9 +74,9 @@ class _NaelMeiScreenState extends State<NaelMeiScreen> {
                 });
               },
             ),
+
           );
-        },
-      ),
+        },),
     );
   }
 }
