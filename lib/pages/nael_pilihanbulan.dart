@@ -61,17 +61,28 @@ class _NaelPilihanbulanState extends State<NaelPilihanbulan> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Title(color: Colors.black, child: Text(pilihish[index].bulan, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),),
+                  Title(color: Colors.black, child:
+                  Text(pilihish[index].bulan, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white,
+                      ),
+                    ),
                   ),
                   ElevatedButton(
-                    style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.indigo)),
+                    style: ButtonStyle(fixedSize: WidgetStatePropertyAll(Size.fromHeight(30),),
+                      backgroundColor: WidgetStatePropertyAll(Colors.indigo),
+                    ),
                     onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => pilihish[index].screen,
                       ),
                     ),
-                    child: Text("Cek", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                    child: Text(
+                      "Cek",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ],
               ),

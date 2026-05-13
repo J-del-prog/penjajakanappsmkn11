@@ -74,7 +74,6 @@ class _NaelMaretScreenState extends State<NaelMaretScreen> {
                 });
               },
             ),
-
           );
         },),
     );
