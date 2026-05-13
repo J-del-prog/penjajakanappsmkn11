@@ -1,5 +1,5 @@
 
-import '../model/Nael_jan.dart';
+import '../model/nael_jan.dart';
 
 List <Naeljan> murid1 = [
   Naeljan(image1: "assets/image/img_2.png", nama1: "Irham Burger", kelengkapan1: "4/10", id1: 0),
