@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../services/nael_mei_service.dart';
+import '../services/nael_bulan_service.dart';
 import 'nafis_profile.dart';
 
 class NaelMeiScreen extends StatefulWidget {
@@ -50,14 +50,14 @@ class _NaelMeiScreenState extends State<NaelMeiScreen> {
         ],
       ),
       body: ListView.builder(
-        itemCount: murid5.length,
+        itemCount: mei.length,
         itemBuilder: (context, index) {
           return Card(
             color: Colors.lightBlueAccent,
             elevation: 5,
             margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
             child: ListTile(
-              leading: Image.asset(murid5[index].image5, width: 40, height: 40,),
+              leading: Image.asset(murid[index].image, width: 40, height: 40,),
               title: Text(murid5[index].nama5, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),),
               subtitle: Text(murid5[index].kelengkapan5, style: TextStyle(fontSize: 10),),
               trailing: Row(

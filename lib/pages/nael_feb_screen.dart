@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:penjajakanappsmkn11/services/nael_feb_service.dart';
+import 'package:penjajakanappsmkn11/services/nael_bulan_service.dart';
 
 import 'nafis_profile.dart';
 
@@ -50,7 +50,7 @@ class _NaelJanState extends State<Naelfebs> {
         ],
       ),
       body: ListView.builder(
-        itemCount: murid2.length,
+        itemCount: feb.length,
         itemBuilder: (context, index) {
           return Card(
             color: Colors.lightBlueAccent,

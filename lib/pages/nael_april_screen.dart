@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:penjajakanappsmkn11/services/nael_bulan_service.dart';
 
 import '../services/nael_april_service.dart';
 import 'nafis_profile.dart';
@@ -50,7 +51,7 @@ class _NaelAprilScreenState extends State<NaelAprilScreen> {
         ],
       ),
       body: ListView.builder(
-        itemCount: murid4.length,
+        itemCount: april.length,
         itemBuilder: (context, index) {
           return Card(
             color: Colors.lightBlueAccent,
